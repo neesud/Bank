@@ -89,11 +89,11 @@
 
     <div class="container">
       <label for="uname"><b>AccNo</b></label>
-      <input (change)="unameChange($event)" type="text" [placeholder]="placeholderData" name="uname" required>
+      <input  id="u1" type="text" [placeholder]="placeholderData" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
+      <label  id="p1" name="pp"><b>Password</b></label>
       
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input  id="u2" type="password" placeholder="Enter Password" name="pass " required>
 
       <button (click)="login()" type="submit">Login</button>
       <label>

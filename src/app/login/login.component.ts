@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-login',
@@ -11,18 +12,28 @@ export class LoginComponent implements OnInit{
    data="your perfect banking partner"
 
    placeholderData="enter acno"
-  constructor() {}
+
+
+
+   uname:any
+   pwd:any
+
+   
+  constructor(private ds:DataService) {
+
+  }
   ngOnInit():void{
 
   }
 
   login(){
-    alert("login clicked")
+    alert(this.ds.checkData())
   }
 
   unameChange(event:any){
     console.log(event.target.value);
     
   }
+
 }
 
